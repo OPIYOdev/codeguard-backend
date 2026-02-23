@@ -1,0 +1,34 @@
+# CodeGuard Backend — Python dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core API framework ────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+python-multipart==0.0.9
+pydantic==2.7.0
+httpx==0.27.0
+
+# ── Static analysis tools ─────────────────────────────────────────────────────
+ruff==0.5.0
+mypy==1.10.0
+
+# ── Security scanning ─────────────────────────────────────────────────────────
+bandit==1.7.9
+# semgrep        # too heavy for free tier RAM — install separately if needed
+detect-secrets==1.5.0
+
+# ── Dynamic testing ───────────────────────────────────────────────────────────
+hypothesis==6.108.0
+pytest==8.2.0
+pytest-timeout==2.3.1
+pytest-asyncio==0.23.7
+
+# ── Performance analysis ──────────────────────────────────────────────────────
+radon==6.0.1
+lizard==1.17.10
+
+# ── Dependency scanning ───────────────────────────────────────────────────────
+pip-audit==2.7.3
+
+# ── Git support (for repo scanning) ──────────────────────────────────────────
+gitpython==3.1.43
