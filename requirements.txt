@@ -1,11 +1,11 @@
-# CodeGuard Backend — Python dependencies
 # Install: pip install -r requirements.txt
+# Render Build Command: pip install --only-binary=:all: -r requirements.txt
 
 # ── Core API framework ────────────────────────────────────────────────────────
 fastapi==0.115.0
 uvicorn[standard]==0.30.0
 python-multipart==0.0.9
-pydantic==2.7.0
+pydantic==2.9.2          # ✅ Uses pre-built pydantic-core wheels (avoids Rust build)
 httpx==0.27.0
 
 # ── Static analysis tools ─────────────────────────────────────────────────────
@@ -31,4 +31,4 @@ lizard==1.17.10
 pip-audit==2.7.3
 
 # ── Git support (for repo scanning) ──────────────────────────────────────────
-gitpython==3.1.43
+gitpython==3.1.40        # ✅ Stable wheel version (avoids build issues)
